@@ -10,7 +10,6 @@
 
 (function sayHi() {
     /partie overlay/
-    $('#overlay').remove();
     'use strict';
     let code = document.scripts[12].text;
     let bgn = code.indexOf("available_dates");
