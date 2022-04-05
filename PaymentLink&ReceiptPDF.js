@@ -22,7 +22,7 @@
     }
 
     //Search for token on the payment page.
-    let token = document.getElementsByTagName("input")[72].value
+    let token = document.querySelectorAll('input[name=paymentLinkToken]')[0].value;
     //Prepare a URL to add a token to it.
     let MyUrl = "https://payment.cmi.co.ma/fim/paymentLinkService?token=";
     //Add token to URL
