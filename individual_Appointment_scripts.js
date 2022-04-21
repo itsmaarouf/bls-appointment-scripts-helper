@@ -66,30 +66,32 @@
  //   ----------------------------------------------------------------------------------------------------
  // PARTI AUTO SUBMIT 
 
-function clicksubmit() {
-if (
-    document.getElementById('app_date').value !== "" &&
-    document.getElementById('app_time').value !== "" &&
-    document.getElementById('VisaTypeId').value !== "" &&
-    document.getElementById('first_name').value !== "" &&
-    document.getElementById('last_name').value !== "" &&
-    document.getElementById('dateOfBirth').value !== "" &&
-    document.getElementById('passportType').value !== "" &&
-    document.getElementById('passport_no').value !== "" &&
-    document.getElementById('pptIssueDate').value !== "" &&
-    document.getElementById('pptExpiryDate').value !==""  &&
-    document.getElementById('pptIssuePalace').value !== ""
-) {
-    console.log('click SUBMIT')
-    document.getElementsByClassName('btn primary-btn')[0].click();
-    }
-}
-var stopconsubmit = setInterval(clicksubmit, 101000);
+ function clicksubmit() {
+    if (
+        document.getElementById("app_date").value !== "" &&
+        document.getElementById("app_time").value !== "" &&
+        document.getElementById("VisaTypeId").value !== "" &&
+        document.getElementById("first_name").value !== "" &&
+        document.getElementById('last_name').value !== "" &&
+        document.getElementById("dateOfBirth").value !== "" &&
+        document.getElementById("passportType").value !== "" &&
+        document.getElementById('passport_no').value !== "" &&
+        document.getElementById("pptIssueDate").value !== "" &&
+        document.getElementById('pptExpiryDate').value !== "" &&
+        document.getElementById("pptIssuePalace").value !== ""
 
-document.getElementsByClassName('btn primary-btn')[0].onclick = function () {
-    'use strict'
-    console.log('STOP CLICKING SUBMIT')
-    clearTimeout(stopconsubmit);
+        ) {
+            console.log('click SUBMIT');
+            document.getElementsByClassName("btn primary-btn")[0].click();
+            }
     }
+    var stopconsubmit = setInterval(clicksubmit, 10*1000);
+    
+    document.getElementsByClassName("btn primary-btn")[0].onclick = function () {
+        'use strict'
+        console.log('STOP CLICKING SUBMIT');
+        clearTimeout(stopconsubmit);
+    }
+    
     console.log("End of code run");
 })();
