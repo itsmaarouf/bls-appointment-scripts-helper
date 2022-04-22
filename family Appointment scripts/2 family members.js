@@ -4,7 +4,12 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://morocco.blsspainvisa.com/*
+// @match        *://*.blsspainvisa.com/appointment_family.php
+// @match        *://*.blsspainvisa.com/*/appointment_family.php
+// @match        *://*.blsspainvisa.com/appointment.php
+// @match        *://*.blsspainvisa.com/*/appointment.php
+// @match        *://*.blsspainvisa.com/embassy_appointment.php
+// @match        *://*.blsspainvisa.com/*/embassy_appointment.php
 // @grant        none
 // ==/UserScript==
 
