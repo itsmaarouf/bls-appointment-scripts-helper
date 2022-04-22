@@ -4,8 +4,12 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        *://*.blsspainvisa.com/english/index.php
-// @match        *://*.blsspainvisa.com/embassy_book_appointment.php
+// @match        *://*.blsspainvisa.com/appointment_family.php
+// @match        *://*.blsspainvisa.com/*/appointment_family.php
+// @match        *://*.blsspainvisa.com/appointment.php
+// @match        *://*.blsspainvisa.com/*/appointment.php
+// @match        *://*.blsspainvisa.com/embassy_appointment.php
+// @match        *://*.blsspainvisa.com/*/embassy_appointment.php
 
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
