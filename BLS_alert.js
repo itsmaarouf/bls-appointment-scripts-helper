@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      2.0.3
 // @description  bls aler  P|R|C Clean Refresh Alarm Notif
-// @author       Mous@2021
+// @author       You
 // @match        *://*.blsspainvisa.com/appointment_family.php
 // @match        *://*.blsspainvisa.com/*/appointment_family.php
 // @match        *://*.blsspainvisa.com/appointment.php
