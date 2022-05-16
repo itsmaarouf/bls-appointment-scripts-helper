@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://morocco.blsspainvisa.com/*
+// @match        *://*.blsspainvisa.com/*
 // @grant        none
 // ==/UserScript==
 //06 89 200 483
