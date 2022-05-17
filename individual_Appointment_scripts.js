@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         individual 
+// @name         individual test
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -11,12 +11,19 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 (function sayHi() {
     'use strict';
-    var code = document.scripts[12].text;
+     let code = "";
+    if (document.scripts[11].text.indexOf("available_dates") != -1) {
+        code = document.scripts[11].text;
+    } else if (document.scripts[12].text.indexOf("available_dates") != -1) {
+        code = document.scripts[12].text;
+    } else {
+        console.log("script number is wrong");
+    }
     var bgn = code.indexOf("available_dates");
     var end = code.indexOf("fullCapicity_dates");
-    var table = code.slice(bgn+19, end-10);
+    var table = code.slice(bgn+20, end-9);
     if (table !== ""){
-        var datee = table.slice(14,22);
+        var datee = table.slice(0,10);
         var dd = datee.slice(0,2);
         var mm = datee.slice(3,5);
         var yyyy = datee.slice(6,10);
@@ -28,14 +35,19 @@
 
         }else
         {
+            //########################################################################
+            //############### THIS IS THE PART YOU MUST CHANGE #######################
+            //########################################################################
             var lastNames ="Last Name";
             var firstNames ="First Name";
-            var births ="Date Of Birth";
-            var passNumbers ="Passport Number";
-            var issueDates ="Passport Issue Date";
-            var expiryDates ="Passport Expiry Date";
-            var pptissuePalaces ="Passport Issue Place";
+            var births ="yyyy-mm-dd";//Date Of Birth
+            var passNumbers ="Passport Number";//Passport Number
+            var issueDates ="yyyy-mm-dd";//Passport Issue Date
+            var expiryDates ="yyyy-mm-dd";//Passport Expiry Date
+            var pptissuePalaces ="city name";//Passport Issue Place
             var franN ="TG700******";
+            //########################################################################
+            //########################################################################
 
             document.getElementById('first_name').value=firstNames;
             document.getElementById('last_name').value=lastNames;
@@ -46,7 +58,7 @@
             document.getElementById('pptIssuePalace').value=pptissuePalaces;
             var audio = new Audio('https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-the-sound-pack-tree/tspt_german_ambulance_sirens_wailing_loop_041.mp3');
             audio.play();
-            document.getElementById("app_time").selectedIndex = document.getElementById('app_time-'+j).length-1;
+            document.getElementById("app_time").selectedIndex = document.getElementById('app_time').length-1;
             document.getElementById("VisaTypeId").selectedIndex = "1";
             if (document.getElementById('fran') !== null){
                 document.getElementById('fran').value=franN;
@@ -64,7 +76,7 @@
             setTimeout(function(){window.location.reload(1);}, 30* 1000);;
         }
  //   ----------------------------------------------------------------------------------------------------
- // PARTI AUTO SUBMIT 
+ // PARTI AUTO SUBMIT
 
  function clicksubmit() {
     if (
@@ -86,12 +98,12 @@
             }
     }
     var stopconsubmit = setInterval(clicksubmit, 10*1000);
-    
+
     document.getElementsByClassName("btn primary-btn")[0].onclick = function () {
         'use strict'
         console.log('STOP CLICKING SUBMIT');
         clearTimeout(stopconsubmit);
     }
-    
+
     console.log("End of code run");
 })();
