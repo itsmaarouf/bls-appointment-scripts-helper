@@ -3,13 +3,8 @@
 // @namespace    http://tampermonkey.net/
 // @version      2.0.3
 // @description  bls aler  P|R|C Clean Refresh Alarm Notif
-// @author       You
-// @match        *://*.blsspainvisa.com/appointment_family.php
-// @match        *://*.blsspainvisa.com/*/appointment_family.php
-// @match        *://*.blsspainvisa.com/appointment.php
-// @match        *://*.blsspainvisa.com/*/appointment.php
-// @match        *://*.blsspainvisa.com/embassy_appointment.php
-// @match        *://*.blsspainvisa.com/*/embassy_appointment.php
+// @author       @Itsmaarouf
+// @match        *://*.blsspainmorocco.com/*
 // @grant        none
 // ==/UserScript==
 
