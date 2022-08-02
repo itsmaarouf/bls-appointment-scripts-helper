@@ -9,8 +9,8 @@
 // ==/UserScript==
 
 var gun=setInterval(function(){
-    if (document.getElementsByClassName('day activeClass').length !==0) { 
-      new Audio('https://www.soundjay.com/mechanical/sounds/machine-gun-02.mp3').play(); 
+    if (document.getElementsByClassName('day activeClass').length !==0) {
+      new Audio('https://www.soundjay.com/mechanical/sounds/smoke-detector-1.mp3').play();
       clearInterval(gun);
     }
 }, 1000)
