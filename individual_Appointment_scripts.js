@@ -5,6 +5,7 @@
 // @description  try to take over the world!
 // @author       @Itsmaarouf
 // @match        *://*.blsspainmorocco.com/*
+// @match        *://*.blsspainvisa.com/*
 // @grant        none
 // ==/UserScript==
 //---------------------------------------------------------------------------------------------------------------------------
@@ -12,13 +13,14 @@
 (function sayHi() {
     'use strict';
      let code = "";
-    if (document.scripts[11].text.indexOf("available_dates") != -1) {
-        code = document.scripts[11].text;
-    } else if (document.scripts[12].text.indexOf("available_dates") != -1) {
-        code = document.scripts[12].text;
-    } else {
-        console.log("script number is wrong");
+    const Days = [];
+    for(var i = 0; i<=document.scripts.length; i++){
+        if (document.scripts[i].text.indexOf("available_dates") != -1) {
+        code = document.scripts[i].text;
+            doMagic();
+        }
     }
+    function doMagic() {
     var bgn = code.indexOf("available_dates");
     var end = code.indexOf("fullCapicity_dates");
     var table = code.slice(bgn+20, end-9);
@@ -106,4 +108,5 @@
     }
 
     console.log("End of code run");
+        }
 })();
